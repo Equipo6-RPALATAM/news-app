@@ -10,7 +10,7 @@
     "format": "prettier --write .",
     "format-check": "prettier --check .",
     "prepare": "husky install",
-    "lint": "eslint . --ext .js --fix"
+    "lint": "eslint . --ext .tsx,.ts,.js --fix"
   },
   "dependencies": {
     "react": "^18.2.0",
