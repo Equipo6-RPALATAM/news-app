@@ -10,8 +10,6 @@ export const Home = (): JSX.Element => {
   const [news, setNews] = useState<Array<New>>([])
   const [error, setError] = useState<string>('')
 
-  // const PROXY = 'https://dailyfastnews.netlify.app/'
-
   const search = 'sports'
   useEffect(() => {
     if (isLoading) {
@@ -22,9 +20,7 @@ export const Home = (): JSX.Element => {
             {
               headers: {
                 'X-Api-Key': import.meta.env.VITE_API_KEY,
-                'Access-Control-Allow-Origin': '*',
               },
-              mode: 'cors',
             },
           )
           if (response.ok) {
