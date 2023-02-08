@@ -10,13 +10,15 @@ export const Home = (): JSX.Element => {
   const [news, setNews] = useState<Array<New>>([])
   const [error, setError] = useState<string>('')
 
+  const PROXY = 'https://dailyfastnews.netlify.app/'
+
   const search = 'sports'
   useEffect(() => {
     if (isLoading) {
       async function getFetchData() {
         try {
           const response = await fetch(
-            `https://newsapi.org/v2/everything?q=${search}`,
+            `${PROXY}https://newsapi.org/v2/everything?q=${search}`,
             {
               headers: { 'X-Api-Key': import.meta.env.VITE_API_KEY },
             },
