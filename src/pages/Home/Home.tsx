@@ -8,7 +8,6 @@ import { type New } from '../../interfaces'
 export const Home = (): JSX.Element => {
   const [isLoading, setIsLoading] = useState<boolean>(true)
   const [news, setNews] = useState<Array<New>>([])
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [error, setError] = useState<string>('')
 
   const search = 'sports'
