@@ -2,21 +2,48 @@ import { useEffect, useState } from 'react'
 import { Header } from '../../shared/Header'
 import { Footer } from '../../shared/Footer'
 import { LatestNewsGrid } from '../../layout/Grid/LatestNewsGrid'
-import { getNews } from '../../api'
+import { type New } from '../../interfaces'
+// import { getNews } from '../../api'
 
 export const Home = (): JSX.Element => {
-  const [news, setNews] = useState([])
+  const [isLoading, setIsLoading] = useState<boolean>(true)
+  const [news, setNews] = useState<Array<New>>([])
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [error, setError] = useState<string>('')
 
+  const search = 'sports'
   useEffect(() => {
-    async function getResults() {
-      setNews(getNews)
+    if (isLoading) {
+      async function getFetchData() {
+        try {
+          const response = await fetch(
+            `https://newsapi.org/v2/everything?q=${search}`,
+            {
+              headers: { 'X-Api-Key': import.meta.env.VITE_API_KEY },
+            },
+          )
+          if (response.ok) {
+            const newsResponse = await response.json()
+            console.log('here', newsResponse)
+            setNews(newsResponse.articles)
+            setIsLoading(false)
+          } else {
+            setError('Hubo un error al obtener las noticias')
+          }
+        } catch (error) {
+          setError('No se pudo realizar la solicitud')
+        }
+      }
+
+      // eslint-disable-next-line @typescript-eslint/no-floating-promises
+      getFetchData()
     }
-  }, [])
+  }, [isLoading])
 
   return (
     <>
       <Header></Header>
-      <LatestNewsGrid></LatestNewsGrid>
+      {!isLoading && <LatestNewsGrid news={news}></LatestNewsGrid>}
       <Footer></Footer>
     </>
   )
