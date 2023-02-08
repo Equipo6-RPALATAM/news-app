@@ -1,1 +1,1 @@
-export { News } from './Home'
+export { Home } from './Home'
