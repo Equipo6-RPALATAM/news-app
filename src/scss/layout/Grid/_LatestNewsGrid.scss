@@ -1,0 +1,14 @@
+.latestNews__section {
+  padding: 0 $padding-primary;
+}
+
+.latestNews__grid {
+  display: grid;
+  row-gap: 30px;
+  column-gap: 50px;
+  grid-template-columns: 1fr 45% 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+}
