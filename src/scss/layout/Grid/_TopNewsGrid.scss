@@ -1,0 +1,6 @@
+.topnews__grid {
+  display: grid;
+  grid-template-columns: repeat(3, calc((100vw - 377px) / 3));
+  grid-template-rows: 300px 400px;
+  // height: 600px;
+}

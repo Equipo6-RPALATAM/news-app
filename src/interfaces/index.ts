@@ -1,5 +1,5 @@
 export * from './News'
-export interface New {
+export interface News {
   author: string
   content: string
   description: string
@@ -11,7 +11,7 @@ export interface New {
 }
 
 export interface NewsResult {
-  articles: New[]
+  articles: News[]
   status: string
   totalResults: number
 }

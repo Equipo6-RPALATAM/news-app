@@ -1,26 +1,15 @@
-import { type New } from '../../interfaces'
-import { dateTransform } from '../../utils/date'
-
+/* eslint-disable @typescript-eslint/restrict-template-expressions */
 interface Props {
-  new: New
-  className: string
+  children?: React.ReactNode
+  className?: string
 }
 
-export const Card = ({
-  className,
-  new: { title, publishedAt, urlToImage },
-}: Props): JSX.Element => {
+export const Card = ({ children, className }: Props): JSX.Element => {
+  const renderClass = !className ? 'card' : `card ${className}`
+
   return (
-    <div className={`card ${className}`}>
-      <div
-        className="card__body"
-        style={{ display: 'flex', flexDirection: 'column' }}
-      >
-        <a className="card__title" href="#">
-          {title}
-        </a>
-        <span className="card__date">{dateTransform(publishedAt)}</span>
-      </div>
+    <div className={renderClass}>
+      <div className="card__body">{children}</div>
     </div>
   )
 }
