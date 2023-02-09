@@ -1,19 +1,31 @@
 import axios from 'axios'
+
 import type { News } from '../interfaces'
 
 const api = axios.create({
-  baseURL: `https://newsapi.org/v2/top-headlines?apiKey=${
-    import.meta.env.VITE_APP_NEWS_API_KEY
-  }`,
+  baseURL: 'https://newsapi.org/v2',
+  headers: {
+    Authorization: import.meta.env.VITE_APP_NEWS_API_KEY,
+    Accept: 'application/json',
+  },
 })
 
-// export default api
-
-export const fetchNews = async () => {
+export const fetchNewsByQuery = async (q: string) => {
   const { data } = await api<{ articles: News[] }>({
-    url: '',
+    url: '/everything',
     params: {
-      country: 'co',
+      q,
+      pageSize: 20,
+    },
+  })
+  return data.articles
+}
+
+export const fetchTopHeadLines = async () => {
+  const { data } = await api<{ articles: News[] }>({
+    url: '/top-headlines',
+    params: {
+      country: 'us',
       pageSize: 10,
     },
   })
