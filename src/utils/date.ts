@@ -1,13 +1,10 @@
-// const months: string[] = ['Januay', 'February', 'March', 'April', 'May']
-
+/**
+ * Es una función para transfromar una cadena en un objeto en formato de fechas
+ * @param date Es un campo string para fechas
+ * @returns Retorna un string
+ */
 export const dateTransform = (date: string): string =>
   new Date(date).toLocaleDateString('en-US', {
     dateStyle: 'long',
     timeZone: 'UTC',
   })
-
-// const year = transformedDate.getFullYear()
-// const month = transformedDate.getMonth()
-// const day = transformedDate.getDay()
-
-// return `${months[month]} ${day}, ${year}`

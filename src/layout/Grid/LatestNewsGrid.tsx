@@ -30,7 +30,7 @@ export const LatestNewsGrid = ({ news }: Props): JSX.Element => {
       <Card className="card__item-7">
         <NewsCard new={news[7]}></NewsCard>
       </Card>
-      <Card className="card__item-8">
+      {/* <Card className="card__item-8">
         <NewsCard new={news[8]}></NewsCard>
       </Card>
       <Card className="card__item-9">
@@ -38,7 +38,7 @@ export const LatestNewsGrid = ({ news }: Props): JSX.Element => {
       </Card>
       <Card className="card__item-10">
         <NewsCard new={news[10]}></NewsCard>
-      </Card>
+      </Card> */}
     </div>
   )
 }

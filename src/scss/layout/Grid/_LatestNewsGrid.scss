@@ -2,6 +2,6 @@
   display: grid;
   column-gap: 50px;
   grid-template-columns: 1fr 40% 1fr;
-  grid-template-rows: repeat(4, 1fr);
-  height: 600px;
+  grid-template-rows: repeat(3, 1fr);
+  height: 450px;
 }

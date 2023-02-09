@@ -3,7 +3,8 @@
   // grid-template-columns: repeat(3, calc((100vw - 377px) / 3));
   // grid-template-rows: 300px 400px;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  // grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: 300px 350px;
   // height: 800px;
   gap: 10px;
 }
