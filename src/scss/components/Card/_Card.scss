@@ -61,21 +61,21 @@
   &__item-4 {
     grid-column: 1/4;
   }
-  &__media{
+  &__media {
     height: 100%;
     width: 100%;
     display: block;
     object-fit: cover;
   }
 
-  &__title{
+  &__title {
     position: absolute;
     bottom: 30px;
     color: $bg-default;
     right: 10px;
     left: 10px;
   }
-  &__author{
+  &__author {
     position: absolute;
     bottom: 5px;
     color: $bg-secondary;
