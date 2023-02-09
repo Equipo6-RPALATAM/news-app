@@ -1,0 +1,1 @@
+export { useFavoriteNewsStore } from './favoriteNews'
