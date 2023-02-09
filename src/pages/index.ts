@@ -1,2 +1,4 @@
-export { News } from './News'
-export { NewsDetail } from './NewsDetail'
+export * from './Home'
+export * from './NewsDetail'
+export * from './NotFound'
+export * from './Profile'

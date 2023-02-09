@@ -14,7 +14,7 @@ export const fetchNews = async () => {
     url: '',
     params: {
       country: 'co',
-      pageSize: 5,
+      pageSize: 10,
     },
   })
   return data.articles

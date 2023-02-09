@@ -1,0 +1,8 @@
+$bg-primary: #000;
+$bg-secondary: #7d7d7d;
+$bg-default: #fff;
+
+:root {
+  --button-background: #{$bg-primary};
+  --button-color: #{$bg-primary};
+}
