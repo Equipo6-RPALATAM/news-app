@@ -1,6 +1,9 @@
 .topnews__grid {
   display: grid;
-  grid-template-columns: repeat(3, calc((100vw - 377px) / 3));
-  grid-template-rows: 300px 400px;
-  // height: 600px;
+  // grid-template-columns: repeat(3, calc((100vw - 377px) / 3));
+  // grid-template-rows: 300px 400px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  // height: 800px;
+  gap: 10px;
 }

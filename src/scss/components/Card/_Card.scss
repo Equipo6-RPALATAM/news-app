@@ -74,10 +74,20 @@
     color: $bg-default;
     right: 10px;
     left: 10px;
+    z-index: 10;
   }
   &__author {
     position: absolute;
     bottom: 5px;
     color: $bg-secondary;
+    z-index: 10;
+    right: 10px;
+    left: 10px;
+  }
+  &::after{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.466);
   }
 }

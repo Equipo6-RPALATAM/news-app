@@ -81,6 +81,7 @@ export const Home = (): JSX.Element => {
         {!isLoading && <LatestNewsGrid news={news}></LatestNewsGrid>}
       </section>
       <section className="topnews__section">
+        <h2 className="topnews__title">Top news</h2>
         {!isLoadingTopNews && <TopNewGrid news={topNews}></TopNewGrid>}
       </section>
       <Footer></Footer>
