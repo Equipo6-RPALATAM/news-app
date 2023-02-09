@@ -3,7 +3,7 @@ import { TopNewsCard } from '../../components/Card/TopNewsCard'
 import { Card } from '../../components/Card/Card'
 
 interface Props {
-  news: Array<News>
+  news: News[]
 }
 
 export const TopNewGrid = ({ news }: Props): JSX.Element => {
