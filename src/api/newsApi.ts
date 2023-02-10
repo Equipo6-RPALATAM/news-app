@@ -31,3 +31,14 @@ export const fetchTopHeadLines = async () => {
   })
   return data.articles
 }
+
+export const fetchTopHeadLinesByQuery = async (q: string) => {
+  const { data } = await api<{ articles: News[] }>({
+    url: '/top-headlines',
+    params: {
+      q,
+      country: 'us',
+    },
+  })
+  return data.articles
+}

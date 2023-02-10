@@ -1,6 +1,11 @@
 .detail__grid {
-  display: flex;
   padding: 10px $padding-primary;
+}
+
+.detail__grid-container {
+  display: flex;
+  width: 600px;
+  margin: 0 auto;
 }
 
 .detail {
@@ -16,7 +21,7 @@
   }
   &__container {
     width: 600px;
-    margin: 0 auto;
+    // margin: 0 auto;
   }
   &__description {
     width: 600px;

@@ -1,7 +1,7 @@
 import { ListIcons } from '../../components/ListIcons/ListIcons'
 import { Detail } from '../../components/Detail/Detail'
 import { useParams } from 'react-router-dom'
-import { useFetchNewsByQuery } from '../../hooks'
+import { useFetchNewsByQuery, useFetchTopHeadLinesByQuery } from '../../hooks'
 import { DetailLayout } from '../../layout/Detail/DetailLayout'
 import { Header } from '../../shared/Header'
 import { Footer } from '../../shared/Footer'
@@ -9,7 +9,7 @@ import { Footer } from '../../shared/Footer'
 export const NewsDetail = (): JSX.Element => {
   const { slug } = useParams()
 
-  const { data: news, isLoading: isLoadingNews } = useFetchNewsByQuery(
+  const { data: news, isLoading: isLoadingNews } = useFetchTopHeadLinesByQuery(
     slug ?? '',
   )
 

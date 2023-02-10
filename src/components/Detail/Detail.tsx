@@ -8,7 +8,6 @@ interface Props {
 export const Detail = ({ news }: Props) => {
   const { author, title, publishedAt, description, urlToImage } = news[0]
 
-  // console.log(urlToImage)
   return (
     <div className="detail">
       <div className="detail__container">
@@ -25,7 +24,8 @@ export const Detail = ({ news }: Props) => {
       <div className="detail__container">
         <img
           className="detail__media"
-          src="https://api.lorem.space/image/game"
+          // src="https://api.lorem.space/image/game"
+          src={urlToImage}
           alt={title}
         />
       </div>

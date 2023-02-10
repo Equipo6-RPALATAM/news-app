@@ -11,6 +11,7 @@ export const Home = (): JSX.Element => {
 
   const { data: news, isLoading: isLoadingNews } = useFetchNewsByQuery(search)
 
+  console.log(topNews)
   return (
     <>
       <Header />

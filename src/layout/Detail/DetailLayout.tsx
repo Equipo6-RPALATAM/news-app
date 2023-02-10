@@ -4,5 +4,9 @@ interface Props {
 }
 
 export const DetailLayout = ({ children }: Props) => {
-  return <div className="detail__grid">{children}</div>
+  return (
+    <div className="detail__grid">
+      <div className="detail__grid-container">{children}</div>
+    </div>
+  )
 }
