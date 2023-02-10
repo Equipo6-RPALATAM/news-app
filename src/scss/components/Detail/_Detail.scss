@@ -1,26 +1,25 @@
-.detail__grid{
+.detail__grid {
   display: flex;
   padding: 10px $padding-primary;
 }
 
-.detail{
+.detail {
   display: flex;
   flex-direction: column;
   width: 100%;
   gap: 10px;
-  &__media{
+  &__media {
     height: 400px;
     width: 100%;
     display: block;
     object-fit: cover;
   }
-  &__container{
+  &__container {
     width: 600px;
     margin: 0 auto;
   }
-  &__description{
+  &__description {
     width: 600px;
     margin: 20px auto;
   }
 }
-
